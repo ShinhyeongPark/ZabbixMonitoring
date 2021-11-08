@@ -45,3 +45,7 @@ variable "subnet_name_grafana_ap" {
 variable "subnet_name_zabbix_db" {
     default = "snet-prod-koreacentera-prod-4"
 }
+
+variable "company_ip" {
+    default = "secret"
+}
