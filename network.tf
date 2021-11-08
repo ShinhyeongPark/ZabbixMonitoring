@@ -1,13 +1,19 @@
 resource "azurerm_resource_group" "rg" {
-  name     = "rg-monitoring-prod-shpark"
-  location = "koreacentral"
+  name     = var.resource_group_name
+  location = var.region
 }
 module "vnet" {
-    vnet_name = "vnet-prod-koreacentral-shpark"
     source = "Azure/vnet/azurerm"
-
+    
+    vnet_name = var.vnet_name
     resource_group_name = azurerm_resource_group.rg.name
-    address_space = ["10.80.0.0/16"]
-    subnet_prefixes = ["10.80.10.0/24", "10.80.20.0/24", "10.80.30.0/24", "10.80.40.0/24"]
-    subnet_names = ["snet-prod-koreacentera-prod-1","snet-prod-koreacentera-prod-2", "snet-prod-koreacentera-prod-3", "snet-prod-koreacentera-prod-4"]
+    address_space = ["${var.vnet_cidr_block}"]
+    subnet_prefixes = [ "${var.bastion_public_subnet}", 
+                        "${var.zabbix_ap_private_subnet}", 
+                        "${var.grafana_ap_private_subnet}",
+                        "${var.zabbix_db_private_subnet}"]
+    subnet_names = ["${var.subnet_name_bastion}",
+                    "${var.subnet_name_zabbix_ap}", 
+                    "${var.subnet_name_grafana_ap}",
+                    "${var.subnet_name_zabbix_db}"]
 }
