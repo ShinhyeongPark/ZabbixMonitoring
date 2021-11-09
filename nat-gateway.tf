@@ -1,15 +1,15 @@
 resource "azurerm_public_ip" "nat_public_ip" {
-  name                = "pip-nat-shpark"
+  name                = var.nat_pip_name
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
-  allocation_method   = "Static"
-  sku                 = "Standard"
+  allocation_method   = var.nat_pip_allocation_method
+  sku                 = var.nat_pip_sku_type
 }
 resource "azurerm_nat_gateway" "nat_gateway" {
-  name                    = "nat-shpark"
+  name                    = var.nat_gateway_name
   location                = azurerm_resource_group.rg.location
   resource_group_name     = azurerm_resource_group.rg.name
-  sku_name                = "Standard"
+  sku_name                = var.nat_gateway_sku_name
 }
 
 resource "azurerm_subnet_nat_gateway_association" "nat_snet_association" {
