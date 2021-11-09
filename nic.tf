@@ -21,7 +21,6 @@ resource "azurerm_network_interface" "nic-vm-gfn-ap-pri-prod-shpark" {
     private_ip_address_allocation = var.nic_ip_pri_allocation
   }
 }
-
 resource "azurerm_network_interface" "nic-vm-zbx-ap-pri-prod-shpark" {
   name                = var.nic_zabbix_name
   location            = azurerm_resource_group.rg.location
