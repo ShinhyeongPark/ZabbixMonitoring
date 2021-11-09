@@ -2,3 +2,4 @@
 terraform.*
 zabbix-key*
 terraform.tfstate
+temp

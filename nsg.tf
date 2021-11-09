@@ -1,49 +1,46 @@
-# module "network-security-group" {
-#   source                = "Azure/network-security-group/azurerm"
-#   resource_group_name   = azurerm_resource_group.rg.name
-#   location              = var.region # Optional; if not provided, will use Resource Group location
-#   security_group_name   = "nsg"
-#   source_address_prefix = ["${var.company_ip}"]
-#   predefined_rules = [
-#     {
-#       name     = "SSH"
-#       priority = "500"
-#     },
-#     {
-#       name              = "LDAP"
-#       source_port_range = "1024-1026"
-#     }
-#   ]
-
+module "nsg_bastion" {
+  source              = "Azure/network-security-group/azurerm"
+  resource_group_name = azurerm_resource_group.rg.name
+  security_group_name = "nsg-vm-mon-bastion-pub-prod-shpark-001"
+  custom_rules = [
+    {
+      name                   = "allow-bastion-ssh"
+      priority               = "100"
+      direction              = "Inbound"
+      access                 = "Allow"
+      protocol               = "Tcp"
+      destination_port_range = "22"
+      source_address_prefix  = "211.168.91.10/32" #개인(집) IP 추가 필요
+      destination_address_prefix = "10.80.10.0/24"
+    }
+    #개인 IP, 110, allow-bastion-ssh-home
+  ]
+  tags = {
+    environment = "dev"
+    costcenter  = "it"
+  }
+  depends_on = [azurerm_resource_group.rg]
+}
+# module "nsg_grafana" {
+#   source              = "Azure/network-security-group/azurerm"
+#   resource_group_name = azurerm_resource_group.rg.name
+#   security_group_name = "nsg-vm-mon-gfn-ap-pri-prod-001"
 #   custom_rules = [
 #     {
-#       name                   = "myssh"
-#       priority               = 201
+#       name                   = "allow-bastion-ssh"
+#       priority               = "100"
 #       direction              = "Inbound"
 #       access                 = "Allow"
-#       protocol               = "tcp"
-#       source_port_range      = "*"
+#       protocol               = "Tcp"
 #       destination_port_range = "22"
-#       source_address_prefix  = "10.151.0.0/24"
-#       description            = "description-myssh"
-#     },
-#     {
-#       name                    = "myhttp"
-#       priority                = 200
-#       direction               = "Inbound"
-#       access                  = "Allow"
-#       protocol                = "tcp"
-#       source_port_range       = "*"
-#       destination_port_range  = "8080"
-#       source_address_prefixes = ["10.151.0.0/24", "10.151.1.0/24"]
-#       description             = "description-http"
-#     },
+#       source_address_prefix  = "211.168.91.10/32" #개인(집) IP 추가 필요
+#       destination_address_prefix = "10.80.10.0/24"
+#     }
+#     #개인 IP, 110, allow-bastion-ssh-home
 #   ]
-
 #   tags = {
 #     environment = "dev"
 #     costcenter  = "it"
 #   }
-
-#   depends_on = [azurerm_resource_group.example]
+#   depends_on = [azurerm_resource_group.rg]
 # }

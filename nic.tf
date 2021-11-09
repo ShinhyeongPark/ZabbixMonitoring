@@ -29,7 +29,7 @@ resource "azurerm_network_interface" "nic-vm-zbx-ap-pri-prod-shpark" {
 
   ip_configuration {
     name                          = var.nic_ip_cofig_zabbix_name
-    subnet_id                     = "${module.vnet.vnet_subnets[2]}"
+    subnet_id                     = "${module.vnet.vnet_subnets[1]}"
     private_ip_address_allocation = var.nic_ip_pri_allocation
   }
 }
