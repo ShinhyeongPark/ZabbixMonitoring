@@ -4,9 +4,8 @@ resource "azurerm_resource_group" "rg" {
 }
 module "vnet" {
     source = "Azure/vnet/azurerm"
-
-    vnet_name = var.vnet_name
     resource_group_name = azurerm_resource_group.rg.name
+    vnet_name = var.vnet_name
     address_space = ["${var.vnet_cidr_block}"]
     subnet_prefixes = [ "${var.bastion_public_subnet}", 
                         "${var.zabbix_ap_private_subnet}", 
@@ -16,19 +15,6 @@ module "vnet" {
                     "${var.subnet_name_zabbix_ap}", 
                     "${var.subnet_name_grafana_ap}",
                     "${var.subnet_name_zabbix_db}"]
+
+    depends_on = [azurerm_resource_group.rg] #Error: Resource Group "rg-monitoring-prod-shpark" was not found -> 다음 에러 발생시 또는 destroy시 vnet, rg 삭제가 안될 경우 depends_on
 }
-
-# module "network" {
-#   source              = "Azure/network/azurerm"
-#   resource_group_name = azurerm_resource_group.rg.name
-#   subnet_prefixes     = [ "${var.bastion_public_subnet}", 
-#                         "${var.zabbix_ap_private_subnet}", 
-#                         "${var.grafana_ap_private_subnet}",
-#                         "${var.zabbix_db_private_subnet}"]
-#   subnet_names        = ["${var.subnet_name_bastion}",
-#                     "${var.subnet_name_zabbix_ap}", 
-#                     "${var.subnet_name_grafana_ap}",
-#                     "${var.subnet_name_zabbix_db}"]
-
-#   depends_on = [azurerm_resource_group.rg]
-# }
