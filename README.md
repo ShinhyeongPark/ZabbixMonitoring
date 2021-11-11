@@ -16,7 +16,7 @@
 
 <br/>
 
-## Abstract
+## 🙌 Abstract
 - Project Name: Monitoring System on Azure
 - Service: Zabbix + Grafana + Slack Integration
 - Resource
@@ -27,7 +27,7 @@
 
 <br/>
 
-## Requirement
+## ❤️‍🔥 Requirement
 ### 1. **리소스 스케쥴 생성(기동 및 백업)**
 
 - Grafana AP 서버의 경우, 평일 기준 08:30 ~ 17:30 설정 후 이후 시간에는 OFF
@@ -40,8 +40,6 @@
 3. Zabbix + Grafana Integration 진행 
 4. Grafana 대시보드 설정 
 5. Zabbix 내 Azure Cloud Monitoring 설정(Dashboard 및 Graph, Trigger 생성 및 연동 확인)
-
-<br/>
 ## ⚙ Azure Infrastructure(수정필요)
 <img width="990" alt="스크린샷 2021-11-11 오후 5 37 09" src="https://user-images.githubusercontent.com/57867611/141265478-203bf720-dc23-4897-a20b-49ac915c5980.png">
 
