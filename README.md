@@ -44,17 +44,17 @@
 <img width="990" alt="스크린샷 2021-11-11 오후 5 37 09" src="https://user-images.githubusercontent.com/57867611/141265478-203bf720-dc23-4897-a20b-49ac915c5980.png">
 
 - 리소스 생성 순서
-    1. Resource Group
-    2. VNET
-    3. NAT Gateway
-    4. Subnet (Public, Private, DB)
-    5. NSG
-    6. NIC (Bastion, Zabbix, Grafana)
-    7. Public IP (Bastion, Zabbix, Grafana)
-    8. DNS
-    9. VM (Bastion, Zabbix, Grafana)
-    10. Azure Database for MySQL
-    11. Load Balancer
+    - Resource Group
+    - VNET
+    - NAT Gateway
+    - Subnet (Public, Private, DB)
+    - NSG
+    - NIC (Bastion, Zabbix, Grafana)
+    - Public IP (Bastion, Zabbix, Grafana)
+    - DNS
+    - VM (Bastion, Zabbix, Grafana)
+    - Azure Database for MySQL
+    - Load Balancer
 
 <br/>
 
