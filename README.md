@@ -83,7 +83,7 @@
 
 <br/>
 
-## Zabbix 모니터링과 Grafana Data 시각화 결과
+## 🐱‍🚀Zabbix 모니터링과 Grafana Data 시각화 결과
 ### Zabbix
 ![Zabbix](https://user-images.githubusercontent.com/57867611/142751307-e0682f67-fcc5-4548-b845-1179ac95a740.png)
 
