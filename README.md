@@ -1,6 +1,6 @@
 <h1 align="center">Zabbix Monitoring on Azure<br/>with Terraform and GitHub Actions</h1>
 <p align="center">
-  <a href="https://github.com/ShinhyeongPark/ZabbixMonitoring">
+  <a href="https://github.com/PARKINHYO/WordPress-Terraform">
     <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   </a> 
   <a href="https://github.com/ShinhyeongPark/Terraform-GitHubAction/blob/main/LICENSE" target="_blank">
@@ -15,6 +15,9 @@
 > <br/>또한 테라폼에서 지원하는 모듈들을 사용했으며, GitHub Actions로 CI/CD를 구성했습니다.
 
 <br/>
+
+### Zabbix&Grafana 모니터링 시스템 구축 메뉴얼은 아래 링크에 정리했습니다.
+[Zabbix&Grafana Montioring System 구축 메뉴얼](https://www.notion.so/Monitoring-System-on-Azure-bac5b5a247014cd4b5489a2b6630f736)
 
 ## 🙌 Abstract
 - Project Name: Monitoring System on Azure
@@ -40,10 +43,9 @@
 3. Zabbix + Grafana Integration 진행 
 4. Grafana 대시보드 설정 
 5. Zabbix 내 Azure Cloud Monitoring 설정(Dashboard 및 Graph, Trigger 생성 및 연동 확인)
-## ⚙ Azure Infrastructure(수정필요)
-<img width="990" alt="스크린샷 2021-11-11 오후 5 37 09" src="https://user-images.githubusercontent.com/57867611/141265478-203bf720-dc23-4897-a20b-49ac915c5980.png">
-
-- 리소스 생성 순서
+## ⚙ Azure Infrastructure
+![edit](https://user-images.githubusercontent.com/57867611/142751104-4f33bcfe-a12c-440b-9ff9-0a9e5d848956.png)
+### 리소스 생성 순서
     - Resource Group
     - VNET
     - NAT Gateway
@@ -58,10 +60,15 @@
 
 <br/>
 
-- 리소스 명명 규칙
+### 리소스 명명 규칙
 <br/> 구분 및 식별을 위해서 명명 규칙을 정해 적용하였고, 추후 리소스 태그에 따른 기능 개발을 위해
 <br/> 태그를 구체적으로 달았습니다.명명 규칙은 아래 사이트를 참조했습니다.
 <br/> [리소스 명명 규칙 참고 사이트](https://docs.microsoft.com/ko-kr/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming)
+
+<br/>
+
+### 리소스 현황
+![스크린샷 2021-11-21 오후 2 45 20](https://user-images.githubusercontent.com/57867611/142751257-17b97f9d-a94c-4a04-9267-ccc3d59555fd.png)
 
 <br/>
 
@@ -82,6 +89,8 @@
 5. [Terraform Registry](https://registry.terraform.io/)
 6. [Terraform Module Source Code](https://registry.terraform.io/namespaces/Azure)
 7. [Terraform AWS 구축 프로젝트 - ShinhyeongPark](https://github.com/ShinhyeongPark/Terraform-GitHubAction)
+8. [Docker Hub](https://hub.docker.com/)
+9. [Zabbix Document](https://www.zabbix.com/documentation/current/manual)
 <br/>
 
 ## ⭐️ Prerequisites
@@ -94,6 +103,14 @@
 8. [GitHub Account](https://github.com/)
 
 <br/>
+
+## Zabbix 모니터링과 Grafana Data 시각화 결과
+### Zabbix
+![Zabbix](https://user-images.githubusercontent.com/57867611/142751307-e0682f67-fcc5-4548-b845-1179ac95a740.png)
+
+### Grafana
+![Grafana](https://user-images.githubusercontent.com/57867611/142751315-804da0c4-78c1-4fd9-8dcb-9f5d6f9d2303.png)
+
 
 ## 💡 Reference
 ### Learn에서 수행한 실습과 Prerequisites를 준비하는 과정들을 노션에 정리했으니 참고해주세요.
