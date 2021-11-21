@@ -44,7 +44,8 @@
 4. Grafana 대시보드 설정 
 5. Zabbix 내 Azure Cloud Monitoring 설정(Dashboard 및 Graph, Trigger 생성 및 연동 확인)
 ## ⚙ Azure Infrastructure
-![edit](https://user-images.githubusercontent.com/57867611/142751104-4f33bcfe-a12c-440b-9ff9-0a9e5d848956.png)
+![스크린샷 2021-11-21 오후 2 54 56](https://user-images.githubusercontent.com/57867611/142751417-1811f9be-194f-453d-a78f-636730af728b.png)
+
 ### 리소스 생성 순서
     - Resource Group
     - VNET
@@ -80,6 +81,15 @@
 
 <br/>
 
+## Zabbix 모니터링과 Grafana Data 시각화 결과
+### Zabbix
+![Zabbix](https://user-images.githubusercontent.com/57867611/142751307-e0682f67-fcc5-4548-b845-1179ac95a740.png)
+
+### Grafana
+![Grafana](https://user-images.githubusercontent.com/57867611/142751315-804da0c4-78c1-4fd9-8dcb-9f5d6f9d2303.png)
+
+<br/>
+
 ## 📖 Learn
 ###  이 프로젝트를 수행하기 위해서 아래 사이트를 참고하고 실습을 진행했습니다.
 1. [Terraform을 사용한 AZURE 인프라 구축](https://learn.hashicorp.com/collections/terraform/azure-get-started)
@@ -103,14 +113,6 @@
 8. [GitHub Account](https://github.com/)
 
 <br/>
-
-## Zabbix 모니터링과 Grafana Data 시각화 결과
-### Zabbix
-![Zabbix](https://user-images.githubusercontent.com/57867611/142751307-e0682f67-fcc5-4548-b845-1179ac95a740.png)
-
-### Grafana
-![Grafana](https://user-images.githubusercontent.com/57867611/142751315-804da0c4-78c1-4fd9-8dcb-9f5d6f9d2303.png)
-
 
 ## 💡 Reference
 ### Learn에서 수행한 실습과 Prerequisites를 준비하는 과정들을 노션에 정리했으니 참고해주세요.
