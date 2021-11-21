@@ -18,6 +18,7 @@
 
 ### Zabbix&Grafana 모니터링 시스템 구축 메뉴얼은 아래 링크에 정리했습니다.
 [Monitoring System on Azure 구축 메뉴얼](https://peppermint-waxflower-244.notion.site/Monitoring-System-on-Azure-bac5b5a247014cd4b5489a2b6630f736)
+<br/>
 [Zabbix&Grafana Montioring System 구축 메뉴얼](https://peppermint-waxflower-244.notion.site/Zabbix-Grafana-21d4521342db4f56a15f06552b227f40)
 
 ## 🙌 Abstract
