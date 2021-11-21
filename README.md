@@ -106,7 +106,7 @@
 <br/>
 
 ## ⭐️ Prerequisites
-### 위의 학습 자료(튜토리얼)을 수행하면 Prereqisites를 충족시킬 수 있습니다.
+### 프로젝트를 수행하기 위해 아래의 항목들을 참고 또는 설치가 필요합니다.
 1. Terraform CLI
 2. [Azure Account](https://portal.azure.com/)
 5. [Terraform Cloud Account](https://www.terraform.io/cloud)
