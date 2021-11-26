@@ -77,11 +77,11 @@
 
 <br/>
 
-## 📌 Application Diagram (수정 필요)
-![image](https://user-images.githubusercontent.com/57867611/139794466-5802fd65-5201-4a04-992b-99e179729cf3.png)
+## 📌 Application Diagram
+<img width="737" alt="스크린샷 2021-11-26 오후 3 51 01" src="https://user-images.githubusercontent.com/57867611/143539064-68d7f28a-fd2e-40f4-a4e7-a803b5887f76.png">
 
-> Docker Compose를 통해 Docker Container (Wordpress가 동작)를 관리 <br/>
-> Wordpress, MySQL 이미지를 통해서 Wordpress 설치, RDS 연결
+> Docker-Compose로 Zabbix Server, Web, Agent Container 관리<br/>
+> Grafana도 Docker로 동작시켜 Zabbix와 연동 (Zabbix는 MySQL과 연동 필요) 
 
 <br/>
 
